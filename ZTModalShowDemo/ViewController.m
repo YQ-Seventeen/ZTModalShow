@@ -45,11 +45,11 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static  NSString  *nameSource[] = {
-            [0] = @"从下弹出customview",
-            [1] = @"从上弹出customview",
-            [2] = @"从左弹出customview",
-            [3] = @"从右弹出customview",
-            [4] = @"从中间弹出customview",
+            [0] = @"customview pop-up from the bottom",
+            [1] = @"customview pop-up from the top",
+            [2] = @"customview pop-up from the left",
+            [3] = @"customview pop-up from the right",
+            [4] = @"customview appear in the middle",
     };
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"123"];
     if (nil == cell) {
