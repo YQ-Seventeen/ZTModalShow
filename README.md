@@ -20,7 +20,11 @@ Just add the `UIViewController+ModalShow.h`+ `UIViewController+ModalShow.m` file
 self.customView                 = [UIView new];
 self.customView.backgroundColor = [UIColor redColor];
 ```
-##### remember that you already set width and height (But not so much~ with 'ZTShowOptionDownToUp' and 'ZTShowOptionUpToDown' you will only need to set 'height'.with 'ZTShowOptionLeftToRight' and 'ZTShowOptionRightToLeft' you will only need to set 'width'.with 'ZTShowOptionCenter' you will need set both 'width' and 'height')
+##### remember that you already set width and height 
+###### (But not so much~）
+###### with 'ZTShowOptionDownToUp' and 'ZTShowOptionUpToDown' you will only need to set 'height'.  
+###### with 'ZTShowOptionLeftToRight' and 'ZTShowOptionRightToLeft' you will only need to set 'width'.  
+###### with 'ZTShowOptionCenter' you will need set both 'width' and 'height')
 ```objective-c
 self.customView.frame           = CGRectMake(0, 0, 200, 200);
 ```
