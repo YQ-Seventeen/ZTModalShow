@@ -1,0 +1,16 @@
+PODS:
+  - ZTModalShow (0.0.1)
+
+DEPENDENCIES:
+  - ZTModalShow (from `../ZTModalShow`)
+
+EXTERNAL SOURCES:
+  ZTModalShow:
+    :path: ../ZTModalShow
+
+SPEC CHECKSUMS:
+  ZTModalShow: c8b91b8be6c41b2ed8c45e20401af4c049aa7dd2
+
+PODFILE CHECKSUM: 15c40c2bcdc463915aa94e0217e57e168e24b297
+
+COCOAPODS: 1.4.0.rc.1
