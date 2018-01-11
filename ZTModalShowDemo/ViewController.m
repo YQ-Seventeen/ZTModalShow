@@ -29,8 +29,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     self.customView                 = [UIView new];
     self.customView.backgroundColor = [UIColor redColor];
+    // remember if the showOption is 'ZTShowOptionCenter' you must set both 'width' and 'height' currently,
+    // for 'ZTShowOptionUpToDown' and 'ZTShowOptionDownToUp' you must set 'height' currently
+    // for 'ZTShowOptionLeftToRight' and 'ZTShowOptionRightToLeft' you must set 'width' currently
     self.customView.frame           = CGRectMake(0, 0, 200, 200);
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
