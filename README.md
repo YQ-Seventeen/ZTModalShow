@@ -24,7 +24,7 @@ self.customView.backgroundColor = [UIColor redColor];
 ###### (But not so much~）
 ###### with 'ZTShowOptionDownToUp' and 'ZTShowOptionUpToDown' you will only need to set 'height'.  
 ###### with 'ZTShowOptionLeftToRight' and 'ZTShowOptionRightToLeft' you will only need to set 'width'.  
-###### with 'ZTShowOptionCenter' you will need set both 'width' and 'height')
+###### with 'ZTShowOptionCenter' you will need set both 'width' and 'height'
 ```objective-c
 self.customView.frame           = CGRectMake(0, 0, 200, 200);
 ```

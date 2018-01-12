@@ -245,7 +245,7 @@
     UIView *coverView                               = option.zt_coverView;
     CGRect destinationRect                          = option.modalOriginalRect;
     static const NSInteger viewAnimationOptionSet[] = {
-            [ZTAnimationOptionNone]      = -1,
+            [ZTAnimationOptionNone]      = 0,
             [ZTAnimationOptionEaseInOut] = UIViewAnimationOptionCurveEaseInOut,
             [ZTAnimationOptionEaseIn]    = UIViewAnimationOptionCurveEaseIn,
             [ZTAnimationOptionEaseOut]   = UIViewAnimationOptionCurveEaseOut,
