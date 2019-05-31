@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZTModalShow"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "A library to modal show a custom view with a simple way ！"
   s.description  = "A library to modal show a custom view with a simple way ！！！"
   s.homepage     = "https://github.com/YQ-Seventeen/ZTModalShow.git"
