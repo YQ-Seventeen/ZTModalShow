@@ -6,11 +6,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   ZTModalShow:
-    :path: ../ZTModalShow
+    :path: "../ZTModalShow"
 
 SPEC CHECKSUMS:
-  ZTModalShow: c8b91b8be6c41b2ed8c45e20401af4c049aa7dd2
+  ZTModalShow: f656042530ad77f6c695ef16f25fd54b6ebff64f
 
 PODFILE CHECKSUM: c3cf8d2d1cd540366b6b852e9887b6bf1d313de5
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.6.2

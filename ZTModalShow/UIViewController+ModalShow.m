@@ -52,6 +52,24 @@
     option.coverBackgroundColor  = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
     return option;
 }
+
+- (void)setShowOption:(ZTShowOption)showOption {
+    _showOption = showOption;
+    if(showOption == ZTShowOptionCenter){
+        self.customTransformDismissHandle = ^(UIView *view,UIView *superView){
+            CGFloat x, y;
+            CGFloat w = view.bounds.size.width, h = view.bounds.size.height;
+            x = (CGRectGetWidth(superView.frame) - w) / 2;
+            y = (CGRectGetHeight(superView.frame) - h) / 2;
+            view.frame = CGRectMake(x, y, w, h);
+            view.transform = CGAffineTransformMakeScale(0.01, 0.01);
+        };
+        self.customTransformShowHandle = ^(UIView *view){
+            view.transform = CGAffineTransformMakeScale(1, 1);
+        };
+    }
+}
+
 @end
 @implementation UIViewController (ModalShow)
 - (void)zt_showViewPresently:(UIView *)view {
@@ -136,7 +154,7 @@
     {
         blocks[ZTShowOptionCenter] = ^(UIView *blk_modalView, UIView *blk_modalSuperView) {
             CGFloat x, y;
-            CGFloat w = 0.01, h = 0.01;
+            CGFloat w = blk_modalView.bounds.size.width, h = blk_modalView.bounds.size.height;
             x = (CGRectGetWidth(blk_modalSuperView.frame) - w) / 2;
             y = (CGRectGetHeight(blk_modalSuperView.frame) - h) / 2;
             return CGRectMake(x, y, w, h);
@@ -185,7 +203,11 @@
     if (view.superview) {
         [view removeFromSuperview];
     }
-    view.frame = originalRect;
+    if(option.customTransformDismissHandle){
+        option.customTransformDismissHandle(option.modalView,option.zt_superView);
+    } else {
+        view.frame = originalRect;
+    }
     [modalSuperView addSubview:view];
     UIView *coverView;
     if (option.showCover) {
@@ -206,7 +228,11 @@
     NSInteger animationType   = viewAnimationOptionSet[option.animationType];
     void (^changeBlock)(void) = ^{
         coverView.alpha = 0.7;
-        view.frame      = destinationRect;
+        if(option.customTransformShowHandle){
+            option.customTransformShowHandle(option.modalView);
+        } else {
+            view.frame      = destinationRect;
+        }
     };
     if (animationType >= 0) {
         [UIView animateWithDuration:option.animationDurationTime
@@ -254,10 +280,18 @@
     NSInteger animationType   = viewAnimationOptionSet[option.animationType];
     void (^changeBlock)(void) = ^{
         coverView.alpha = 0;
-        view.frame      = destinationRect;
+        if(option.customTransformDismissHandle) {
+            option.customTransformDismissHandle(option.modalView,option.zt_superView);
+        } else {
+            view.frame      = destinationRect;
+        }
     };
     void (^removeBlock)(void) = ^{
-        view.frame = option.modalViewOriginalRect;
+//        if(option.customTransformShowHandle){
+//            option.customTransformShowHandle(option.modalView);
+//        } else {
+//            view.frame = option.modalViewOriginalRect;
+//        }
         [coverView removeFromSuperview];
         [view removeFromSuperview];
     };

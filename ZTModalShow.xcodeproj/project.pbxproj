@@ -107,8 +107,6 @@
 				A845C8202006F8B500D7AEB6 /* Sources */,
 				A845C8212006F8B500D7AEB6 /* Frameworks */,
 				A845C8222006F8B500D7AEB6 /* Resources */,
-				A3F75FED818C9D67535F0728 /* [CP] Embed Pods Frameworks */,
-				4EF6CB84D3691843420ED01C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,36 +165,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4EF6CB84D3691843420ED01C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZTModalShow/Pods-ZTModalShow-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A3F75FED818C9D67535F0728 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZTModalShow/Pods-ZTModalShow-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		AF148EED9A6C1ACFC04FB36A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
