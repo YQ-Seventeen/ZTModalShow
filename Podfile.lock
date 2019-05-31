@@ -1,5 +1,5 @@
 PODS:
-  - ZTModalShow (0.0.1)
+  - ZTModalShow (0.0.2)
 
 DEPENDENCIES:
   - ZTModalShow (from `../ZTModalShow`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../ZTModalShow"
 
 SPEC CHECKSUMS:
-  ZTModalShow: f656042530ad77f6c695ef16f25fd54b6ebff64f
+  ZTModalShow: 9bd653667016a68df6488a50a2f417a591cdb055
 
 PODFILE CHECKSUM: c3cf8d2d1cd540366b6b852e9887b6bf1d313de5
 

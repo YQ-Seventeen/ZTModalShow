@@ -15,6 +15,6 @@ target 'ZTModalShow' do
 
   # Pods for ZTModalShow
 #   pod 'ZTModalShow', :git => 'https://github.com/YQ-Seventeen/ZTModalShow.git'
-   pod 'ZTModalShow', :path => '../ZTModalShow'
+ #  pod 'ZTModalShow', :path => '../ZTModalShow'
 #    pod 'ZTModalShow'
 end
