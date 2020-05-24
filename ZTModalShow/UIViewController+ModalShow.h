@@ -113,7 +113,7 @@ typedef void (^commomBlock)(void);
 // a block that call when ModalView did  dismiss
 @property (copy, nonatomic) commomBlock dismissBlock;
 // if you want some custom transform you can use this. so that this categories will not opeation view behaviors
-@property (copy, nonatomic) void(^customTransformShowHandle)(UIView *) ;
+@property (copy, nonatomic) void(^customTransformShowHandle)(UIView *,UIView *) ;
 @property (copy, nonatomic) void(^customTransformDismissHandle)(UIView *,UIView *);
 //return a default ModalView Option Object
 + (instancetype)defaultOption;
