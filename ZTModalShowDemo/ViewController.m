@@ -88,6 +88,7 @@
         default:
             break;
     }
+	NSLog(@"%@",NSStringFromCGRect(self.customView.frame));
     [self zt_showView:self.customView WithConfiguration:option];
 }
 @end

@@ -55,22 +55,17 @@
 
 - (void)setShowOption:(ZTShowOption)showOption {
     _showOption = showOption;
-	__block CGSize viewSize;
     if(showOption == ZTShowOptionCenter){
         self.customTransformDismissHandle = ^(UIView *view,UIView *superView){
-			viewSize = CGSizeMake(view.bounds.size.width, view.bounds.size.height);
             CGFloat x, y;
-            CGFloat w = 1,h=1;
+			CGFloat w = view.bounds.size.width, h = view.bounds.size.height;
             x = (CGRectGetWidth(superView.frame) - w) / 2;
             y = (CGRectGetHeight(superView.frame) - h) / 2;
             view.frame = CGRectMake(x, y, w, h);
+			view.transform = CGAffineTransformMakeScale(0.01, 0.01);
         };
         self.customTransformShowHandle = ^(UIView *view,UIView *superView){
-			CGFloat x, y;
-            CGFloat w = viewSize.width, h = viewSize.height;
-            x = (CGRectGetWidth(superView.frame) - w) / 2;
-            y = (CGRectGetHeight(superView.frame) - h) / 2;
-            view.frame = CGRectMake(x, y, w, h);
+			view.transform = CGAffineTransformIdentity;
         };
     }
 }
@@ -299,6 +294,7 @@
 //        }
         [coverView removeFromSuperview];
         [view removeFromSuperview];
+		view.transform = CGAffineTransformIdentity;
 		view.frame = option.modalViewOriginalRect;
     };
     if (animationType >= 0) {
