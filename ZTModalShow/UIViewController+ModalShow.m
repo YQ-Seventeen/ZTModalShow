@@ -118,11 +118,7 @@
     }
     UIView *modalSuperView = option.modalSuperView;
     if (!modalSuperView) {
-        if ([self isKindOfClass:[UIViewController class]] && self.navigationController) {
-            modalSuperView = self.navigationController.view;
-        } else {
-            modalSuperView = self.view;
-        }
+		modalSuperView = self.view;
     }
     if (option.modalInWindow) {
         modalSuperView = [self lastWindow];
